@@ -18,12 +18,12 @@ Git topics:
 
 * [X] 
       ◦	clone
-* [ ] 
+* [X] 
       ◦	local repository / remote repository
 
 * [ ] 
       ◦	pull
-* [ ] 
+* [X] 
       ◦	push
 
 * [ ] 

@@ -21,7 +21,7 @@ Git topics:
 * [X] 
       ◦	local repository / remote repository
 
-* [ ] 
+* [X] 
       ◦	pull
 * [X] 
       ◦	push

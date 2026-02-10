@@ -15,5 +15,5 @@ Git topics:
 * [X] ◦	merge
 * [X] ◦	branch creation and branch merging
 * [X] ◦	stashing
-* [ ] ◦	revert
+* [X] ◦	revert
 * [X] ◦	reset

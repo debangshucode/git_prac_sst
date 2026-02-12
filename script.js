@@ -68,10 +68,3 @@ console.log(flag);
 (day === "sunday" && age >=18) ? console.log("you can go out") : console.log("you cannot go out");
 (day === "sunday" || age >=18) ? console.log("you can go out") : console.log("you cannot go out");
 
-let car = new Array(10);
-console.log(car.length);
-
-for (let i=0;i<car.length;i++){
-    car[i]=i;
-    console.log(car[i]);
-}

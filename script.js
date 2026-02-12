@@ -75,4 +75,3 @@ for (let i=0;i<car.length;i++){
     car[i]=i;
     console.log(car[i]);
 }
-abcd e

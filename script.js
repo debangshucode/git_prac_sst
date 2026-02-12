@@ -1,5 +1,7 @@
 let a =10 
 let b =20
+let age = 25
+let flag
 console.log("Addition of a+b = " + (a+b))
 console.log("multiplication of a*b = " + (a*b))
 console.log("division of a/b = " + (a/b))
@@ -30,3 +32,38 @@ console.log("remainder of a%b = " + (a%b))
 console.log("power of a**b = " + (a**b))
 console.log("increment of a = " + (++a))
 console.log("decrement of a = " + (--a))
+
+console.log("ternary operator example");
+
+(age >= 18) ? console.log("you are an adult") : console.log("you are a minor");
+
+switch(new Date().getDay()){
+    case 0:
+        day = "sunday";
+        break;
+    case 1:
+        day = "monday";
+        break;
+    case 2:
+        day = "tuesday";
+        break;
+    case 3:
+        day = "wednesday";
+        break;
+    case 4:
+        day = "thursday";
+        break;
+    case 5:
+        day = "friday";
+        break;
+    case 6:
+        day = "saturday";
+        break;
+}
+
+console.log("today is " + day);
+flag = (day==="sunday") ? true : false;
+console.log(flag);
+
+(day === "sunday" && age >=18) ? console.log("you can go out") : console.log("you cannot go out");
+(day === "sunday" || age >=18) ? console.log("you can go out") : console.log("you cannot go out");

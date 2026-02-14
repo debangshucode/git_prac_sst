@@ -3,7 +3,7 @@ letters.add("e");
 console.log(letters);
 letters.delete("b");
 console.log(letters);
-// sets only carry unique values
+// sets only carry unique values and remove duplicates 
 
 console.log(letters.has("c"));  
 

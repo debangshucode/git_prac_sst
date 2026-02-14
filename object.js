@@ -52,7 +52,7 @@ let jsn = JSON.stringify(fruits);
 console.log(jsn);
 
 
-function Person(name, age, city, ) {
+function Person(name, age, city, ) { //constructor fnc
   this.name = name;
   this.age = age;
   this.city = city;

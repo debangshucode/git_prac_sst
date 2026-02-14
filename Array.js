@@ -43,7 +43,7 @@ console.log(cars);
 let numbers = [4, 1, 16, 25];
 numbers.sort((a, b) => a - b);
 console.log(numbers);
-let newNum =  numbers.flatMap((x)=>[x,x*2]);
+let newNum =  numbers.flatMap((x)=>[x,x*2]); //it first runs map fnc and then flats the array , so for array of array it shows the value unlike map fnc 
 console.log(newNum);
 let sum = numbers.reduce((total,val)=>{return total+val},100);
 console.log(sum);

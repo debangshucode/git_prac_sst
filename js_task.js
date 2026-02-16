@@ -57,7 +57,9 @@ console.log(`Key-value pair of obj is ${Object.entries(obj)}`)
 // 1️⃣7️⃣ Access a deeply nested property safely using optional chaining (?.) to avoid runtime errors.
  
 // 1️⃣8️⃣ Use the nullish coalescing operator (??) to provide a default value when a variable is null or undefined.
- 
+ let var1 = null;
+ let var2 = var1 ?? "Default";
+ console.log(`Default value when var is null : ${var2}`)
 // 1️⃣9️⃣ Find the first number greater than 25 in an array and its index using find() and findIndex().
  console.log(`new array - ${newArr}`)
  let num25 = newArr.find((x)=>{return x>25})

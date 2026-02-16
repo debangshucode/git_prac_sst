@@ -34,7 +34,13 @@
  console.log(`the string with spaces${str}`)
  console.log((str.trim()).toUpperCase())
 // 1️⃣1️⃣ Extract all keys, values, and key–value pairs from an object using built-in object methods.
- 
+ const obj = {
+    Name : "Debangshu Dey",
+    Age : 24
+ }
+console.log(`keys of obj is ${Object.keys(obj)}`)
+console.log(`values of obj is ${Object.values(obj)}`)
+console.log(`Key-value pair of obj is ${Object.entries(obj)}`)
 // 1️⃣2️⃣ Use object destructuring to extract specific properties from an object and store them in separate variables.
  
 // 1️⃣3️⃣ Merge two objects into one using the spread operator and explain how duplicate keys are handled.

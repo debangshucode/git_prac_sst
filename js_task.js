@@ -42,9 +42,12 @@ console.log(`keys of obj is ${Object.keys(obj)}`)
 console.log(`values of obj is ${Object.values(obj)}`)
 console.log(`Key-value pair of obj is ${Object.entries(obj)}`)
 // 1️⃣2️⃣ Use object destructuring to extract specific properties from an object and store them in separate variables.
- 
+
+
 // 1️⃣3️⃣ Merge two objects into one using the spread operator and explain how duplicate keys are handled.
- 
+
+
+
 // 1️⃣4️⃣ Extract one property from an object and group the remaining ones into a new object using the rest operator.
  
 // 1️⃣5️⃣ Remove duplicate elements from an array using the Set object.
@@ -58,3 +61,5 @@ console.log(`Key-value pair of obj is ${Object.entries(obj)}`)
 // 1️⃣9️⃣ Find the first number greater than 25 in an array and its index using find() and findIndex().
  
 // 2️⃣0️⃣ Flatten a deeply nested array into a single-level array using the flat() method.
+let nArr=[1, [2, 3, [4, 5]], 6, [7, [8, [9]]]]
+console.log(nArr.flat(Infinity));

@@ -59,7 +59,11 @@ console.log(`Key-value pair of obj is ${Object.entries(obj)}`)
 // 1️⃣8️⃣ Use the nullish coalescing operator (??) to provide a default value when a variable is null or undefined.
  
 // 1️⃣9️⃣ Find the first number greater than 25 in an array and its index using find() and findIndex().
- 
+ console.log(`new array - ${newArr}`)
+ let num25 = newArr.find((x)=>{return x>25})
+ let num25I = newArr.findIndex((x)=>{return x>25})
+ console.log(`The first number which is grater than 25 is -${num25}`)
+ console.log(`The index of the first num that is grater than 25 is : ${num25I}`)
 // 2️⃣0️⃣ Flatten a deeply nested array into a single-level array using the flat() method.
 let nArr=[1, [2, 3, [4, 5]], 6, [7, [8, [9]]]]
-console.log(nArr.flat(Infinity));
+console.log(`flat- ${nArr.flat(Infinity)}`);

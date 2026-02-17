@@ -12,7 +12,15 @@ let obj3 = {Name:"WWW",Score:20}
 let arr = [obj1,obj2,obj3]
 console.table(arr.sort((a,b)=>{return b.Score-a.Score}));
 //Q4 Given a sentence, count how many times each word appears and return the result as an object where keys are words and values are their counts.
-
+let str1 = "Bottle";
+function checkF(str1){
+    let obj ={};
+    for(let x of str1){
+        obj[x]=(obj[x]||0)+1;
+    }
+    return obj;
+}
+console.log(checkF(str1))
 //Q5 Write a function that checks if a given string is a palindrome. The check should be case-insensitive and should ignore spaces.
 
 //Q6 You have an array containing duplicate values. Remove all duplicates without using set and return the cleaned array.

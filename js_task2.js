@@ -61,9 +61,19 @@ let Person = {
 let pArr = Object.entries(Person);
 console.table(pArr)
 //Q10 Given a string, count how many times each character appears (ignoring spaces) and return the result as an object.
-
+let word = "Heyyy my name is Debangshu";
+function checkF(str){
+    let cleanW = str.replaceAll(" ","");
+    let obj ={};
+    for(let x of cleanW){
+        obj[x]=(obj[x]||0)+1;
+    }
+    return obj;
+}
+console.log(checkF(word))
 //Q11 Flatten a deeply nested array into a single-level array.
-
+let nArr = [[1,[2,3]],[[2,3],4],[[[3,4],3],5]]
+console.log(`Q11 : ${nArr.flat(Infinity)}`)
 //Q12 Write a function that finds the largest and smallest number in an array.
 
 //Q13 Given two arrays, return a new array containing only the elements that are present in both.

@@ -79,7 +79,19 @@ function findMaxMin(arr){
     let sArr = arr.sort((a,b)=>{return a-b})
     console.log(`max: ${sArr[sArr.length-1]}, min: ${sArr[0]}`)
 }
-findMaxMin(`Q12 ${arr1}`)
+findMaxMin(arr1)
 //Q13 Given two arrays, return a new array containing only the elements that are present in both.
+let a1 =[1,2,3,4,5],b = [2,5,4,7,8]
+let resArr =[]
+function sameElm(arr1,arr2){
+    for(let x of arr1){
+        if(arr2.includes(x)){
+            resArr.push(x);
+        }
+    }
+    return resArr;
+}
+console.log(`Q13 : ${sameElm(a1,b)}`)
+
 
  

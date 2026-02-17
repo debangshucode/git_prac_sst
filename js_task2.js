@@ -3,7 +3,8 @@ let numbers = [5, 12, 3, 20, 8, 15];
 let result = numbers.filter(num => num > 10).map(num => num * 2);
 console.log(`Q1:  ${result}`);
 //Q2 Write a function that takes a string and returns it reversed.
-
+let str ="Hello Debangshu"
+console.log(`Q2: ${str.split("").reverse().join("")}`)
 //Q3 You have an array of objects where each object contains a  name and a score. Sort the array in descending order of score.
 
 //Q4 Given a sentence, count how many times each word appears and return the result as an object where keys are words and values are their counts.

@@ -32,7 +32,9 @@ console.log((isPalindrome(str2))?"Q5 Palindrome":"Q5 Not Palindrome")
 
 
 //Q6 You have an array containing duplicate values. Remove all duplicates without using set and return the cleaned array.
-
+let arr1 = [1, 2, 3, 2, 4, 1, 5];
+let uArr1 = arr1.filter((v,i)=> {return arr1.indexOf(v)===i});
+console.log(`Q6 : ${uArr1}`)
 //Q7 Write a function that splits an array into chunks of a given size and returns them as an array of arrays.
 
 //Q8 Given a sentence, return a new sentence where the first letter of every word is capitalized.

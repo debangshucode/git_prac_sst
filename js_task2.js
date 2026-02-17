@@ -22,6 +22,14 @@ function checkF(str1){
 }
 console.log(checkF(str1))
 //Q5 Write a function that checks if a given string is a palindrome. The check should be case-insensitive and should ignore spaces.
+let str2 = "ABC cba";
+function isPalindrome(str2){
+    let str3 = str2.replace(" ","").toLowerCase();
+    let str4 =str3.split("").reverse().join("");
+    return str3 === str4; 
+}
+console.log((isPalindrome(str2))?"Q5 Palindrome":"Q5 Not Palindrome")
+
 
 //Q6 You have an array containing duplicate values. Remove all duplicates without using set and return the cleaned array.
 

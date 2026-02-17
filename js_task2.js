@@ -36,7 +36,15 @@ let arr1 = [1, 2, 3, 2, 4, 1, 5];
 let uArr1 = arr1.filter((v,i)=> {return arr1.indexOf(v)===i});
 console.log(`Q6 : ${uArr1}`)
 //Q7 Write a function that splits an array into chunks of a given size and returns them as an array of arrays.
-
+function arArr(arr,size){
+    let res = [];
+    for (let i=0;i<arr.length;i+=size){
+        res.push(arr.slice(i,i+size));
+    }
+    return res;
+}
+console.log("Q7")
+console.log(arArr(arr1,2))
 //Q8 Given a sentence, return a new sentence where the first letter of every word is capitalized.
 
 //Q9 Convert an object into an array of key, value pairs.

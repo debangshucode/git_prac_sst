@@ -75,7 +75,11 @@ console.log(checkF(word))
 let nArr = [[1,[2,3]],[[2,3],4],[[[3,4],3],5]]
 console.log(`Q11 : ${nArr.flat(Infinity)}`)
 //Q12 Write a function that finds the largest and smallest number in an array.
-
+function findMaxMin(arr){
+    let sArr = arr.sort((a,b)=>{return a-b})
+    console.log(`max: ${sArr[sArr.length-1]}, min: ${sArr[0]}`)
+}
+findMaxMin(`Q12 ${arr1}`)
 //Q13 Given two arrays, return a new array containing only the elements that are present in both.
 
  

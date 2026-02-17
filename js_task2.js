@@ -6,7 +6,11 @@ console.log(`Q1:  ${result}`);
 let str ="Hello Debangshu"
 console.log(`Q2: ${str.split("").reverse().join("")}`)
 //Q3 You have an array of objects where each object contains a  name and a score. Sort the array in descending order of score.
-
+let obj1 = {Name:"DEB",Score:10}
+let obj2 = {Name:"RAJ",Score:6}
+let obj3 = {Name:"WWW",Score:20}
+let arr = [obj1,obj2,obj3]
+console.table(arr.sort((a,b)=>{return b.Score-a.Score}));
 //Q4 Given a sentence, count how many times each word appears and return the result as an object where keys are words and values are their counts.
 
 //Q5 Write a function that checks if a given string is a palindrome. The check should be case-insensitive and should ignore spaces.

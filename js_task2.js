@@ -46,7 +46,13 @@ function arArr(arr,size){
 console.log("Q7")
 console.log(arArr(arr1,2))
 //Q8 Given a sentence, return a new sentence where the first letter of every word is capitalized.
-
+let sen = "hi how are u";
+function capitalize(){
+    let split = sen.split(" ");
+    let newSen = split.map((x)=>{return x.charAt(0).toUpperCase()+x.slice(1)})
+    return newSen.join(" ");
+}
+console.log(`Q8 : ${capitalize(sen)}`)
 //Q9 Convert an object into an array of key, value pairs.
 
 //Q10 Given a string, count how many times each character appears (ignoring spaces) and return the result as an object.

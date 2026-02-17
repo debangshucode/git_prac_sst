@@ -54,7 +54,12 @@ function capitalize(){
 }
 console.log(`Q8 : ${capitalize(sen)}`)
 //Q9 Convert an object into an array of key, value pairs.
-
+let Person = { 
+    Name: "Debangshu",
+    Age:26
+}
+let pArr = Object.entries(Person);
+console.table(pArr)
 //Q10 Given a string, count how many times each character appears (ignoring spaces) and return the result as an object.
 
 //Q11 Flatten a deeply nested array into a single-level array.

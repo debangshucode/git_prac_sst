@@ -25,7 +25,7 @@ for (let x of fruits.entries()) {
 }
 
 fruits.forEach (function(value,key) {
-  console.log(`it will return value and keys such as - "${value},${MediaKeySession}", if only only have one parameter then it will return the value only - "${value}"`);
+  console.log(`it will return value and keys such as - "${value},${key}", if only only have one parameter then it will return the value only - "${value}"`);
 })
 
 // Map.values() returns value only 

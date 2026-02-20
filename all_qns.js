@@ -41,6 +41,7 @@
     {
         let Numbers = [1,2,3,4,5,6,7,8,9,0];
         console.log(`Q7 IS all numbers in the array is Even : ${Numbers.every(x=>x%2===0)}`)
+        console.log(`Q7 IS at least one number in the array is Even : ${Numbers.some(x=>x%2===0)}`)
     }
 // 8️⃣ Split a string by a specific character and then join the result with a different separator.
     {

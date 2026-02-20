@@ -6,6 +6,43 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: black;
+            color: rgb(228, 3, 179);
+            font-weight: 700;
+            font-size: large;
+            animation: border 3s ease-in-out infinite ;
+            margin: 20px;
+        }
+        @keyframes blink {
+            0%{
+                color: rgb(6, 206, 26);
+                transform: rotate(0deg);
+            }
+            25%{
+                color: rgb(9, 151, 35);
+            }
+            50%{
+                color: rgb(5, 86, 20) ;
+            }
+            75%{
+                color: rgb(9, 151, 35);
+            }
+            100%{
+                color: rgb(6, 206, 26)  ;
+                transform: rotate(360deg);
+            }
+        }
+        p,h4{
+            animation: blink 3s ease-in-out infinite;
+        }
+    </style>
+    
     <p>hello world</p>
     <p>hello </p>
     <p>This is 2nd branch</p>

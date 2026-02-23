@@ -45,7 +45,9 @@
 }
 // 8️⃣ Split a string by a specific character and then join the result with a different separator.
 {
-    console.log(`Q8`)
+    let str:string ="hi debangshu how ara you";
+    let str2:string = str.split(" ").join(",");
+    console.log(`Q8 : ${str2}`)
 }
 // 9️⃣ Replace all occurrences of a word in a string with another word using a single JavaScript statement.
 {

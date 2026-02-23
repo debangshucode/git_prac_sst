@@ -118,18 +118,19 @@
         Age: 22,
         Address: "string",
     }
-    const {Name,...AgeAddress}:{Name:string,[key:string]:string|number} = person1;
+    const { Name, ...AgeAddress }: { Name: string, [key: string]: string | number } = person1;
     console.log(`Q14 : Name : ${Name} and Rest : ${JSON.stringify(AgeAddress)}`)
 }
 // 1️⃣5️⃣ Remove duplicate elements from an array using the Set object.
 {
-    let arr:number[] = [9,76,4,3,2,57,2,4];
-    let set:number[] = [...new Set(arr)];
+    let arr: number[] = [9, 76, 4, 3, 2, 57, 2, 4];
+    let set: number[] = [...new Set(arr)];
     console.log(`Q15 : ${set}`)
 }
 // 1️⃣6️⃣ Create a Map to store user data (like name and age) and retrieve one property using its key.
 {
-    console.log(`Q16`)
+    let map: Map<string, string | number> = new Map<string,string|number>([["Name", "Debangshu"], ["Age", 22]]);
+    console.log(`Q16 : ${Array.from(map)}`)
 }
 // 1️⃣7️⃣ Access a deeply nested property safely using optional chaining (?.) to avoid runtime errors.
 {

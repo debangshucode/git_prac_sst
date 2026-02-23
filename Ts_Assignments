@@ -92,7 +92,24 @@
 }
 // 1️⃣3️⃣ Merge two objects into one using the spread operator and explain how duplicate keys are handled.
 {
-   
+    interface Person {
+        Name: string,
+        Age: number,
+        Address?: string,
+        Number?: number,
+    }
+    const person1: Person = {
+        Name: "string",
+        Age: 22,
+        Address: "string",
+    }
+    const person2: Person = {
+        Name: "string",
+        Age: 22,
+        Number: 2345432234,
+    }
+    const person3: Person = { ...person1, ...person2 }
+    console.log(`Q13 ${JSON.stringify(person3)}`)
 }
 // 1️⃣4️⃣ Extract one property from an object and group the remaining ones into a new object using the rest operator.
 {

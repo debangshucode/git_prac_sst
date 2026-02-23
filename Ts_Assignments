@@ -177,8 +177,9 @@
     console.log(`Q19 : number :${num}, index:${index}`)
 }
 // 2️⃣0️⃣ Flatten a deeply nested array into a single-level array using the flat() method.
-{
-    console.log(`Q20`)
+{   let arr:(number | number[])[] = [9,[76,4],[3,2],[57,2,4]]
+    arr = arr.flat(Infinity)
+    console.log(`Q20 : ${arr}`)
 }
 // 2️⃣1️⃣ You are given an array of numbers. Filter out all numbers less than or equal to 10, and then double each of the remaining numbers. Return the final array.
 {

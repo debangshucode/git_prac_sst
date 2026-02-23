@@ -123,7 +123,9 @@
 }
 // 1️⃣5️⃣ Remove duplicate elements from an array using the Set object.
 {
-    console.log(`Q15`)
+    let arr:number[] = [9,76,4,3,2,57,2,4];
+    let set:number[] = [...new Set(arr)];
+    console.log(`Q15 : ${set}`)
 }
 // 1️⃣6️⃣ Create a Map to store user data (like name and age) and retrieve one property using its key.
 {

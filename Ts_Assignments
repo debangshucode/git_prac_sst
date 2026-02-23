@@ -129,32 +129,45 @@
 }
 // 1️⃣6️⃣ Create a Map to store user data (like name and age) and retrieve one property using its key.
 {
-    let map: Map<string, string | number> = new Map<string,string|number>([["Name", "Debangshu"], ["Age", 22]]);
+    let map: Map<string, string | number> = new Map<string, string | number>([["Name", "Debangshu"], ["Age", 22]]);
     console.log(`Q16 : ${Array.from(map)}`)
 }
 // 1️⃣7️⃣ Access a deeply nested property safely using optional chaining (?.) to avoid runtime errors.
 {
     interface Home {
-        sqrf : number,
-        yeard?:{
-            sqrf:number,
+        sqrf: number,
+        yeard?: {
+            sqrf: number,
         }
     }
-    function getYeard(home:Home):string|number{
-        if(home.yeard?.sqrf===undefined){
+    function getYeard(home: Home): string | number {
+        if (home.yeard?.sqrf === undefined) {
             return "No Yeard"
         }
         else return home.yeard.sqrf
     }
-    const home:Home={
-        sqrf : 23,
+    const home: Home = {
+        sqrf: 23,
     }
-    
+
     console.log(`Q17 : ${getYeard(home)}`)
 }
 // 1️⃣8️⃣ Use the nullish coalescing operator (??) to provide a default value when a variable is null or undefined.
 {
-    console.log(`Q18`)
+    interface Home {
+        sqrf: number,
+        yeard?: {
+            sqrf: number,
+        }
+    }
+    function getYeard(home: Home): string | number {
+        return home.yeard?.sqrf ?? "no Yeard is available"
+    }
+    const home: Home = {
+        sqrf: 23,
+    }
+
+    console.log(`Q18 : ${getYeard(home)}`)
 }
 // 1️⃣9️⃣ Find the first number greater than 25 in an array and its index using find() and findIndex().
 {

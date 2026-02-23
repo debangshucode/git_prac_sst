@@ -58,35 +58,41 @@
 // 🔟 Remove extra spaces from the beginning and end of a string and convert it to uppercase.
 {
     let str: string = "            hi debangshu how ara you              ";
-    let str2: string = str.trim().toUpperCase() ;
+    let str2: string = str.trim().toUpperCase();
     console.log(`Q10 : ${str2}`)
 }
 // 1️⃣1️⃣ Extract all keys, values, and key–value pairs from an object using built-in object methods.
 {
-    interface Person{
-        Name:string;
-        Age:number;
-        Address:string
+    interface Person {
+        Name: string;
+        Age: number;
+        Address: string
     }
-    const objPerson:Person={
-        Name:"Debangshu Dey",
-        Age:22,
-        Address:"Ahmedabad"
+    const objPerson: Person = {
+        Name: "Debangshu Dey",
+        Age: 22,
+        Address: "Ahmedabad"
     }
-    let keys : string[] = Object.keys(objPerson);
-    let value : unknown[] = Object.values(objPerson);
-    let keyValue : [string,any] [] = Object.entries(objPerson);
+    let keys: string[] = Object.keys(objPerson);
+    let value: unknown[] = Object.values(objPerson);
+    let keyValue: [string, any][] = Object.entries(objPerson);
     console.log(`Q11 : keys : ${keys}`)
     console.log(`Q11 : values : ${value}`)
     console.log(`Q11 : keyValue : ${keyValue}`)
 }
 // 1️⃣2️⃣ Use object destructuring to extract specific properties from an object and store them in separate variables.
 {
-    console.log(`Q12`)
+    const objPerson = {
+        Name: "Debangshu Dey",
+        Age: 22,
+        Address: "Ahmedabad"
+    }
+    const { Name, Age, Address }: { Name: string, Age: number, Address: string } = objPerson
+    console.log(`Q12 : ${Name} | ${Age} | ${Address}`)
 }
 // 1️⃣3️⃣ Merge two objects into one using the spread operator and explain how duplicate keys are handled.
 {
-    console.log(`Q13`)
+   
 }
 // 1️⃣4️⃣ Extract one property from an object and group the remaining ones into a new object using the rest operator.
 {

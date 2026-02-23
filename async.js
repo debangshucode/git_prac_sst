@@ -44,6 +44,8 @@ let myPromise = new Promise(function (resolve, reject) {
     reject("something is wrong ");
   }
 });
+
+
 myPromise.then(
   function (value) {
     console.log(value);

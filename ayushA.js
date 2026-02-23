@@ -91,3 +91,11 @@ async function checkout(cart) {
   await applyDiscount(v3);
   return cart;
 }
+
+
+async function getData(cart){
+  let v =await checkout(cart)
+  console.log(v)
+}
+getData(cart)
+

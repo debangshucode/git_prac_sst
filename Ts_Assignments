@@ -171,26 +171,30 @@
 }
 // 1️⃣9️⃣ Find the first number greater than 25 in an array and its index using find() and findIndex().
 {
-    let arr:number[] = [9,76,4,3,2,57,2,4]
-    let num:number|undefined = arr.find((x:number):boolean=>x>25) ;
-    let index:number|undefined = arr.findIndex((x:number):boolean=>x>25)
+    let arr: number[] = [9, 76, 4, 3, 2, 57, 2, 4]
+    let num: number | undefined = arr.find((x: number): boolean => x > 25);
+    let index: number | undefined = arr.findIndex((x: number): boolean => x > 25)
     console.log(`Q19 : number :${num}, index:${index}`)
 }
 // 2️⃣0️⃣ Flatten a deeply nested array into a single-level array using the flat() method.
-{   let arr:(number | number[])[] = [9,[76,4],[3,2],[57,2,4]]
+{
+    let arr: (number | number[])[] = [9, [76, 4], [3, 2], [57, 2, 4]]
     arr = arr.flat(Infinity)
     console.log(`Q20 : ${arr}`)
 }
 // 2️⃣1️⃣ You are given an array of numbers. Filter out all numbers less than or equal to 10, and then double each of the remaining numbers. Return the final array.
 {
-    console.log(`Q21`)
+    let arr: number[] = [9, 76, 4, 3, 2, 57, 2, 4]
+    let arr2: number[] = arr.filter((x: number): boolean => x > 10).map((x: number): number => x * 2)
+    console.log(`Q21 : ${arr2}`)
 }
 // 2️⃣2️⃣ Write a function that takes a string and returns it reversed.
 {
-    console.log(`Q22`)
+   
 }
 // 2️⃣3️⃣ You have an array of objects where each object contains a name and a score. Sort the array in descending order of score.
 {
+
     console.log(`Q23`)
 }
 // 2️⃣4️⃣ Given a sentence, count how many times each word appears and return the result as an object where keys are words and values are their counts.

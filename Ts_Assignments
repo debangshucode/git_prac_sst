@@ -134,7 +134,23 @@
 }
 // 1️⃣7️⃣ Access a deeply nested property safely using optional chaining (?.) to avoid runtime errors.
 {
-    console.log(`Q17`)
+    interface Home {
+        sqrf : number,
+        yeard?:{
+            sqrf:number,
+        }
+    }
+    function getYeard(home:Home):string|number{
+        if(home.yeard?.sqrf===undefined){
+            return "No Yeard"
+        }
+        else return home.yeard.sqrf
+    }
+    const home:Home={
+        sqrf : 23,
+    }
+    
+    console.log(`Q17 : ${getYeard(home)}`)
 }
 // 1️⃣8️⃣ Use the nullish coalescing operator (??) to provide a default value when a variable is null or undefined.
 {

@@ -113,7 +113,13 @@
 }
 // 1️⃣4️⃣ Extract one property from an object and group the remaining ones into a new object using the rest operator.
 {
-    console.log(`Q14`)
+    const person1 = {
+        Name: "string",
+        Age: 22,
+        Address: "string",
+    }
+    const {Name,...AgeAddress}:{Name:string,[key:string]:string|number} = person1;
+    console.log(`Q14 : Name : ${Name} and Rest : ${JSON.stringify(AgeAddress)}`)
 }
 // 1️⃣5️⃣ Remove duplicate elements from an array using the Set object.
 {

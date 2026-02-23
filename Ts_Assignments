@@ -30,7 +30,11 @@
 }
 // 6️⃣ Calculate the sum of all numbers in an array using the reduce() method.
 {
-    console.log(`Q6`)
+    let arr:number[] = [9,76,4,3,2,57,2,4]
+    let sum:number = arr.reduce((acc:number,cur:number):number=>{
+        return acc+cur;
+    })
+    console.log(`Q6 : ${sum}`)
 }
 // 7️⃣ Check if all numbers in an array are even using every(), and if at least one is even using some().
 {

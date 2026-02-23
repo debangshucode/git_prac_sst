@@ -51,7 +51,9 @@
 }
 // 9️⃣ Replace all occurrences of a word in a string with another word using a single JavaScript statement.
 {
-    console.log(`Q9`)
+    let str:string ="hi debangshu how ara you,hi wasim how are you";
+    let str2:string=str.replaceAll("hi","Yo")
+    console.log(`Q9 : ${str2}`)
 }
 // 🔟 Remove extra spaces from the beginning and end of a string and convert it to uppercase.
 {

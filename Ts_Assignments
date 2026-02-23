@@ -190,7 +190,20 @@
 }
 // 2️⃣2️⃣ Write a function that takes a string and returns it reversed.
 {
-   
+    let str: string = "ABCDE"
+    function reverse(str: string): string[] {
+        let strF: string[] = str.split("");
+        for (let i:number = 0; i < strF.length / 2; i++) {
+            let temp :string = strF[i];
+            let x:number = i + 1;
+            strF[i] = strF[strF.length - x]
+            strF[strF.length - x] = temp
+            console.log(temp, strF[i], strF[strF.length - x])
+        }
+        return strF;
+    }
+    let str1 = reverse(str)
+    console.log(`Q22 ${str1}`)
 }
 // 2️⃣3️⃣ You have an array of objects where each object contains a name and a score. Sort the array in descending order of score.
 {

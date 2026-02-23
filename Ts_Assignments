@@ -38,7 +38,10 @@
 }
 // 7️⃣ Check if all numbers in an array are even using every(), and if at least one is even using some().
 {
-    console.log(`Q7`)
+    let arr:number[] = [9,76,4,3,2,57,2,4]
+    let all:boolean = arr.every((x:number):Boolean=>x%2===0);
+    let some:boolean = arr.some((x:number):Boolean=>x%2===0)
+    console.log(`Q7 every : ${all}, some : ${some}`)
 }
 // 8️⃣ Split a string by a specific character and then join the result with a different separator.
 {

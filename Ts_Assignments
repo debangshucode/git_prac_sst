@@ -207,16 +207,35 @@
 }
 // 2️⃣3️⃣ You have an array of objects where each object contains a name and a score. Sort the array in descending order of score.
 {
+    interface student {
+        Name:string,
+        Score:number
+    }
 
-    console.log(`Q23`)
+    let arr:student[] = [{Name:"RAj",Score:37},{Name:"Shan",Score:57},{Name:"Pritam",Score:9},{Name:"Sabya",Score:100}]
+    arr.sort((a:student,b:student):number=>{
+        return b.Score-a.Score
+    })
+    console.log(`Q23 : ${JSON.stringify(arr)}`)
 }
 // 2️⃣4️⃣ Given a sentence, count how many times each word appears and return the result as an object where keys are words and values are their counts.
 {
-    console.log(`Q24`)
+    let str : string = "HI HI HI HI HI hi HOW how How"
+    let strAr : string[] = str.toLowerCase().split(" ");
+    type objects = {[key:string]:number}
+    let object = strAr.reduce((obj:objects,cur:string):objects=> {
+        obj[cur] = (obj[cur]||0)+1
+        return obj
+    },{})
+    console.log(`Q24 ${JSON.stringify(object)}`)
 }
 // 2️⃣5️⃣ Write a function that checks if a given string is a palindrome. The check should be case-insensitive and should ignore spaces.
-{
-    console.log(`Q25`)
+{   
+    let str:string = "abc CBa"
+    let str2:string = str.toLowerCase().replaceAll(" ","");
+    let str3:string = str2.split("").reverse().join("");
+
+    (str2===str3)? console.log(`Q25 palindrome`):console.log(`Q25 not palindrome`)
 }
 // 2️⃣6️⃣ You have an array containing duplicate values. Remove all duplicates without using set and return the cleaned array.
 {

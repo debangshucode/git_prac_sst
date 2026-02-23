@@ -63,7 +63,22 @@
 }
 // 1️⃣1️⃣ Extract all keys, values, and key–value pairs from an object using built-in object methods.
 {
-    console.log(`Q11`)
+    interface Person{
+        Name:string;
+        Age:number;
+        Address:string
+    }
+    const objPerson:Person={
+        Name:"Debangshu Dey",
+        Age:22,
+        Address:"Ahmedabad"
+    }
+    let keys : string[] = Object.keys(objPerson);
+    let value : unknown[] = Object.values(objPerson);
+    let keyValue : [string,any] [] = Object.entries(objPerson);
+    console.log(`Q11 : keys : ${keys}`)
+    console.log(`Q11 : values : ${value}`)
+    console.log(`Q11 : keyValue : ${keyValue}`)
 }
 // 1️⃣2️⃣ Use object destructuring to extract specific properties from an object and store them in separate variables.
 {

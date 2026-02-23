@@ -171,7 +171,10 @@
 }
 // 1️⃣9️⃣ Find the first number greater than 25 in an array and its index using find() and findIndex().
 {
-    console.log(`Q19`)
+    let arr:number[] = [9,76,4,3,2,57,2,4]
+    let num:number|undefined = arr.find((x:number):boolean=>x>25) ;
+    let index:number|undefined = arr.findIndex((x:number):boolean=>x>25)
+    console.log(`Q19 : number :${num}, index:${index}`)
 }
 // 2️⃣0️⃣ Flatten a deeply nested array into a single-level array using the flat() method.
 {

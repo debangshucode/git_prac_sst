@@ -1,7 +1,7 @@
 // 1️⃣ Write a program to reverse an array using built-in JavaScript methods.
 {
     let arr: number[] = [1, 23, 4, 45, 5, 6, 2]
-    console.log(`Q1 : ${arr.reverse()}`)
+    console.log(`Q1 : ${arr.toReversed()}`)
 }
 // 2️⃣ Sort an array of numbers in ascending order without using loops.
 {
@@ -33,14 +33,14 @@
     let arr: number[] = [9, 76, 4, 3, 2, 57, 2, 4]
     let sum: number = arr.reduce((acc: number, cur: number): number => {
         return acc + cur;
-    })
+    },0)
     console.log(`Q6 : ${sum}`)
 }
 // 7️⃣ Check if all numbers in an array are even using every(), and if at least one is even using some().
 {
     let arr: number[] = [9, 76, 4, 3, 2, 57, 2, 4]
-    let all: boolean = arr.every((x: number): Boolean => x % 2 === 0);
-    let some: boolean = arr.some((x: number): Boolean => x % 2 === 0)
+    let all: boolean = arr.every((x: number): boolean => x % 2 === 0);
+    let some: boolean = arr.some((x: number): boolean => x % 2 === 0)
     console.log(`Q7 every : ${all}, some : ${some}`)
 }
 // 8️⃣ Split a string by a specific character and then join the result with a different separator.
@@ -194,9 +194,9 @@
     function reverse(str: string): string[] {
         let strF: string[] = str.split("");
         for (let i:number = 0; i < strF.length / 2; i++) {
-            let temp :string = strF[i];
+            let temp :string = strF[i]!;
             let x:number = i + 1;
-            strF[i] = strF[strF.length - x]
+            strF[i] = strF[strF.length - x]!
             strF[strF.length - x] = temp
             console.log(temp, strF[i], strF[strF.length - x])
         }
@@ -207,13 +207,13 @@
 }
 // 2️⃣3️⃣ You have an array of objects where each object contains a name and a score. Sort the array in descending order of score.
 {
-    interface student {
+    interface Student {
         Name:string,
         Score:number
     }
 
-    let arr:student[] = [{Name:"RAj",Score:37},{Name:"Shan",Score:57},{Name:"Pritam",Score:9},{Name:"Sabya",Score:100}]
-    arr.sort((a:student,b:student):number=>{
+    let arr:Student[] = [{Name:"RAj",Score:37},{Name:"Shan",Score:57},{Name:"Pritam",Score:9},{Name:"Sabya",Score:100}]
+    arr.sort((a:Student,b:Student):number=>{
         return b.Score-a.Score
     })
     console.log(`Q23 : ${JSON.stringify(arr)}`)
@@ -269,7 +269,7 @@
     {   
         interface Person{
             Name:string,
-            Age:Number
+            Age:number
         }
         let obj:Person = {Name:"Debangshu",Age:22}
         let arr:[string,number][] = Object.entries(obj)
@@ -292,7 +292,7 @@
 {
     type NestedNumberArray = (number | NestedNumberArray)[];
     let arr : NestedNumberArray = [1,2,3,[2,3,4,5,[6,4,3],[3,5,5,56],[4,34,3,5]]]
-    let arr2:number[] = arr.flat(Infinity)
+    let arr2:number[] = arr.flat(Infinity) 
     console.log(`Q31 flatten a deeply nested array : ${arr2}`)
 }
 // 3️⃣2️⃣ Write a function that finds the largest and smallest number in an array.

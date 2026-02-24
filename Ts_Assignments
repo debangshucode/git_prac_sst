@@ -238,34 +238,79 @@
     (str2===str3)? console.log(`Q25 palindrome`):console.log(`Q25 not palindrome`)
 }
 // 2️⃣6️⃣ You have an array containing duplicate values. Remove all duplicates without using set and return the cleaned array.
-{
-    console.log(`Q26`)
+{   
+    let arr: number[] = [2,2,3,3,4,5,4,5]
+    let arr2 : number[] =arr.filter((x:number,index:number):boolean=>arr.indexOf(x)===index)
+    console.log(`Q26 : ${arr2}`)
 }
 // 2️⃣7️⃣ Write a function that splits an array into chunks of a given size and returns them as an array of arrays.
-{
-    console.log(`Q27`)
+{   
+    let arr: number[] = [2,2,3,3,4,5,4,5]
+    type DArr = number[][];
+    function chunks(arr:number[],size:number):DArr{
+        let arr2 : DArr = [];
+        for(let i = 0;i<arr.length;i+=size){
+            arr2.push(arr.slice(i,size+i))
+        }
+        return arr2;
+    }
+    let arr2:DArr = chunks(arr,3)
+    console.log("Q27 -")
+    console.log(arr2)
 }
 // 2️⃣8️⃣ Given a sentence, return a new sentence where the first letter of every word is capitalized.
-{
-    console.log(`Q28`)
+{   
+    let str:string = "hi how are you"
+    let str2:string[] = str.split(" ")
+    let str3:string = str2.map((x:string):string=>x.charAt(0).toUpperCase()+x.slice(1)).join(" ")
+    console.log(`Q28 : ${str3}`)
 }
 // 2️⃣9️⃣ Convert an object into an array of key, value pairs.
-{
-    console.log(`Q29`)
-}
+    {   
+        interface Person{
+            Name:string,
+            Age:Number
+        }
+        let obj:Person = {Name:"Debangshu",Age:22}
+        let arr:[string,number][] = Object.entries(obj)
+        console.log(`Q29 array of key-value pair : ${JSON.stringify(arr)}`)
+    }
 // 3️⃣0️⃣ Given a string, count how many times each character appears (ignoring spaces) and return the result as an object.
-{
-    console.log(`Q30`)
-}
+    {
+        let str:string = "aa bb bccc cdd ddd"
+        type Objects = {[key:string]:number}
+        function count(str:string){
+            let str2 = str.replaceAll(" ","").split("");
+            return str2.reduce((obj:Objects,x:string)=>{
+                obj[x]=(obj[x]||0)+1;
+                return obj;
+            },{})
+        }
+        console.log(`Q30 occurence of characters : ${JSON.stringify(count(str))}`)
+    }
 // 3️⃣1️⃣ Flatten a deeply nested array into a single-level array.
 {
-    console.log(`Q31`)
+    type NestedNumberArray = (number | NestedNumberArray)[];
+    let arr : NestedNumberArray = [1,2,3,[2,3,4,5,[6,4,3],[3,5,5,56],[4,34,3,5]]]
+    let arr2:number[] = arr.flat(Infinity)
+    console.log(`Q31 flatten a deeply nested array : ${arr2}`)
 }
 // 3️⃣2️⃣ Write a function that finds the largest and smallest number in an array.
-{
-    console.log(`Q32`)
-}
+    {
+        let arr:number[] = [1,9,2,4,12,6,1,0]
+        function maxMin(arr:number[]):{[key:string]:number}{
+            let max:number = Math.max(...arr)
+            let min:number = Math.min(...arr)
+            return {max,min}
+        }
+        let res:{[key:string]:number} = maxMin(arr);
+        console.log(`Q32 Max: ${res.max} | Min: ${res.min}`)
+    }
 // 3️⃣3️⃣ Given two arrays, return a new array containing only the elements that are present in both.
-{
-    console.log(`Q33`)
-}
+    {
+        let arr :number[] = [1,2,3,4,5,6,7]
+        let arr1 :number[] = [10,9,8,7,6,5,4]
+        let arr2 :number[] = arr.filter((x:number):boolean=>arr1.includes(x))
+        console.log(`Q33 1st array : ${arr} | 2nd array : ${arr1} | elements have both array : ${arr2}`)
+    }
+// 

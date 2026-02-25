@@ -10,8 +10,13 @@ function secondFunction() {
 setInterval(clock, 1000); //runc clock function at each interval
 function clock() {
   let date = new Date();
+  let hours = date.getHours();
+  const ampm = hours >= 12 ? "PM" : "AM";
+
+  hours = hours % 12;
+  hours = hours ? hours : 12;
   let time =
-    date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+    hours + ":" + date.getMinutes() + ":" + date.getSeconds() + " " + ampm;
   document.getElementById("time").innerText = time;
 }
 
@@ -44,7 +49,6 @@ let myPromise = new Promise(function (resolve, reject) {
     reject("something is wrong ");
   }
 });
-
 
 myPromise.then(
   function (value) {
@@ -104,13 +108,13 @@ function getUser() {
 async function fetchUsers() {
   try {
     const User = await getUser();
-    let data = User.reduce((object,user)=>{
-        object[user.Id]=user
-        return object;
-    },{})
-    console.log(JSON.stringify(data))
+    let data = User.reduce((object, user) => {
+      object[user.Id] = user;
+      return object;
+    }, {});
+    console.log(JSON.stringify(data));
   } catch (error) {
     console.log(error);
   }
 }
-fetchUsers()
+fetchUsers();

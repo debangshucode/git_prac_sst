@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      class="w-screen h-screen bg-black flex justify-center items-center flex-col"
+    >
+      <div class="w-full text-white font-semibold text-3xl text-center">
+        Noob TO-DO
+      </div>
+      
+      <div class="w-full h-[85%] p-5 flex justify-center items-center gap-5">
+        <!-- history -->
+        <div
+        id="historyContainer"
+        class="bg-white w-[30%] h-full border-2 border-indigo-500 rounded-md  flex justify-center items-center flex-col gap-2 p-2"
+      ></div>
+      <!-- to do list  -->
+      <div
+        class="bg-white w-[60%] h-full flex justify-center items-center gap-2 flex-col p-2 rounded-md "
+      >
+        <!-- display -->
+        <div
+          id="display"
+          class="border-2 border-indigo-500 w-full h-[60%] bg-slate-200 select-none rounded-md p-2"
+        ></div>
+        <!-- input -->
+        <div class="border-2 border-indigo-500 w-full h-[40%] rounded-md ">
+          <textarea
+            id="input"
+            name="input"
+            id=""
+            placeholder="Write your note here"
+            class="w-full h-full p-5 outline-none text-center"
+          ></textarea>
+        </div>
+        <div class="w-full flex justify-between items-center gap-5 p-2">
+          <button
+            id="btn"
+            class="bg-green-500 p-2 px-5 rounded-md text-white font-medium cursor-pointer"
+            onclick="sendData()"
+          >
+            Submit
+          </button>
+          <button
+            id="save"
+            class="bg-blue-500 p-2 px-5 rounded-md text-white font-medium cursor-pointer"
+            onclick="handleSave()"
+          >
+            Save
+          </button>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <script src="to-do.js"></script>
+  </body>
+</html>
